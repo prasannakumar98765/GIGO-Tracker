@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
   const server = http.createServer(app);
   const io = socketIo(server, {
-    cors: { origin: '*', methods: ['GET', 'POST'] }
+    cors: { origin: 'https://locallogistics.vercel.app', credentials: true,  methods: ['GET', 'POST'] }
   });
 
   global.io = io;
