@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
   const server = http.createServer(app);
   const io = socketIo(server, {
-    cors: { origin: 'https://gigo-tracker-frontend.vercel.app/',  methods: ['GET', 'POST'] }
+    cors: { origin: ['https://gigo-tracker-frontend.vercel.app','http://localhost:3000'] methods: ['GET', 'POST'] }
   });
 
   global.io = io;
