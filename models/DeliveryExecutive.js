@@ -2,6 +2,8 @@ const mongoose = require('mongoose')
 
 const deliveryExecutiveShema = new mongoose.Schema({
     name: String,
+    executive_id: Number,
+    role: String,
     currentLocation: {
         lat: Number,
         lan: Number
